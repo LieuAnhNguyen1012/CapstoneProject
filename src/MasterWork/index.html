@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <title>Masterwork - Corporate Category Website</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Google Fonts (Thêm phông chữ cho chuẩn giao diện Masterwork) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 (Dùng cho các Icon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Bootstrap CSS v5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+    <!-- ==========================================
+     HEADER / NAVBAR
+=========================================== -->
+<header class="fixed-top header-main">
+    <nav class="navbar navbar-expand-lg py-3">
+        <div class="container">
+            
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+                <i class="fa-regular fa-handshake me-2 logo-icon"></i>
+                <span>Masterwork</span>
+            </a>
+
+            <!-- Toggle Button trên Mobile -->
+            <button class="navbar-toggler border-0 shadow-none p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMasterwork" aria-controls="navbarMasterwork" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu Navigation & Actions -->
+            <div class="collapse navbar-collapse" id="navbarMasterwork">
+                
+                <!-- Nav Links -->
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages <i class="fa-solid fa-angle-down ms-1 fs-12"></i>
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-sm">
+                            <li><a class="dropdown-item" href="#">Blog Posts</a></li>
+                            <li><a class="dropdown-item" href="#">Landing Page</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Action Items (Search, CTA Button, Dark/Light Mode) -->
+                <div class="header-actions d-flex align-items-center gap-3">
+                    <button class="btn btn-icon rounded-circle" type="button" title="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+
+                    <a href="#" class="btn btn-outline-theme text-uppercase fw-bold">Schedule a demo</a>
+
+                    <button class="btn btn-icon rounded-circle" id="themeToggler" type="button" title="Toggle Theme">
+                        <i class="fa-regular fa-moon"></i>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+    <!-- ==========================================
+         MAIN CONTENT AREA
+    =========================================== -->
+    <main style="margin-top: 80px;">
+
+        <!-- SECTION 1: HERO BANNER -->
+        <section id="hero" class="hero-section py-5">
+            <div class="container py-lg-5">
+                <div class="row align-items-center">
+                    <!-- Text Side -->
+                    <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                        <h1 class="display-4 fw-bold mb-3">We Execute Our Ideas From Start to Finish</h1>
+                        <p class="lead text-muted mb-4">Building a beautiful interactive business for startups and innovative companies.</p>
+                        <a href="#" class="btn btn-outline-danger btn-lg px-4 py-2 fs-6 fw-bold">GET STARTED</a>
+                    </div>
+                    <!-- Image Side -->
+                    <div class="col-12 col-lg-6">
+                        <img src="images/main-banner.png" class="img-fluid rounded" alt="Hero Banner">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: WHY CHOOSE US (3 FEATURE CARDS) -->
+        <section id="why-choose-us" class="py-5 bg-light">
+            <div class="container py-lg-4">
+                <div class="text-center max-width-holder mx-auto mb-5">
+                    <h6 class="text-danger fw-bold text-uppercase">Why Choose Us</h6>
+                    <h2 class="fw-bold">Tools for business startup to professional</h2>
+                    <p class="text-muted">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis dapibus nunc, ut rhoncus turpis sodales quis.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-12 col-md-4">
+                        <!-- Card 1: Interactive -->
+                        <div class="card h-100 border-0 shadow-sm p-4 text-center">
+                            <div class="card-body">
+                                <h3 class="card-title h4 fw-bold">Interactive</h3>
+                                <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tempora rerum perspiciatis?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <!-- Card 2: Business -->
+                        <div class="card h-100 border-0 shadow-sm p-4 text-center">
+                            <div class="card-body">
+                                <h3 class="card-title h4 fw-bold">Business</h3>
+                                <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tempora rerum perspiciatis?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <!-- Card 3: Inspiration -->
+                        <div class="card h-100 border-0 shadow-sm p-4 text-center">
+                            <div class="card-body">
+                                <h3 class="card-title h4 fw-bold">Inspiration</h3>
+                                <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tempora rerum perspiciatis?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: ABOUT OUR COMPANY & STATS -->
+        <section id="about-stats" class="py-5">
+            <div class="container py-lg-4">
+                <div class="row align-items-center">
+                    <!-- Left Column: Intro text -->
+                    <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                        <h6 class="text-danger fw-bold text-uppercase">About Our Company</h6>
+                        <h2 class="fw-bold mb-3">The Best Choice For Your Successful Business!</h2>
+                        <p class="text-muted mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et est repellendus illum harum quam nihil totam reprehenderit! Ut sed eveniet quos!</p>
+                        <a href="about.html" class="btn btn-danger px-4 py-2 fw-bold">READ MORE</a>
+                    </div>
+                    <!-- Right Column: Counter Stats -->
+                    <div class="col-12 col-lg-6">
+                        <div class="row g-4">
+                            <div class="col-12 col-sm-6">
+                                <div class="p-4 bg-light rounded text-center">
+                                    <h3 class="fw-bold text-danger display-6">10,458</h3>
+                                    <h5 class="fw-bold fs-6">Happy Customers</h5>
+                                    <p class="text-muted small mb-0">Lorem ipsum dolor sit amet consectetur.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="p-4 bg-light rounded text-center">
+                                    <h3 class="fw-bold text-danger display-6">890</h3>
+                                    <h5 class="fw-bold fs-6">Winning Awards</h5>
+                                    <p class="text-muted small mb-0">Lorem ipsum dolor sit amet consectetur.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="p-4 bg-light rounded text-center">
+                                    <h3 class="fw-bold text-danger display-6">5,345</h3>
+                                    <h5 class="fw-bold fs-6">Completed Projects</h5>
+                                    <p class="text-muted small mb-0">Lorem ipsum dolor sit amet consectetur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: COMMITMENT BANNER -->
+        <section id="commitment" class="py-5 bg-danger text-white">
+            <div class="container text-center py-lg-3">
+                <h2 class="fw-bold mb-3">We are true to ourselves, and commit to always perform at our best.</h2>
+                <p class="mb-4 mx-auto" style="max-width: 800px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, doloribus atque. Corrupti exercitationem voluptatem ipsum iste consequuntur et vitae voluptas.</p>
+                <a href="#" class="btn btn-outline-light px-4 py-2 fw-bold">READ MORE</a>
+            </div>
+        </section>
+
+        <!-- SECTION 5: GENERAL FAQS (ACCORDION) -->
+        <section id="faqs" class="py-5 bg-light">
+            <div class="container py-lg-4">
+                <div class="text-center mb-5">
+                    <h6 class="text-danger fw-bold text-uppercase">Questions and Answers</h6>
+                    <h2 class="fw-bold">General FAQs</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8">
+                        <div class="accordion" id="faqAccordion">
+                            <!-- FAQ Item 1 -->
+                            <div class="accordion-item mb-3 border-0 shadow-sm rounded">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        There are many passages but the majority?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-muted">
+                                        Voluptates amet earum velit nobis aliquam laboriosam nihil debitis facere voluptatibus consectetur quae quasi fuga, ad corrupti libero omnis sapiente.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item 2 -->
+                            <div class="accordion-item mb-3 border-0 shadow-sm rounded">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        Sed ut perspiciatis unde omnis?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-muted">
+                                        Voluptates amet earum velit nobis aliquam laboriosam nihil debitis facere voluptatibus consectetur quae quasi fuga.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: FEATURED CASES / PROJECTS -->
+        <section id="projects" class="py-5">
+            <div class="container py-lg-4">
+                <div class="text-center mb-5">
+                    <h6 class="text-danger fw-bold text-uppercase">Featured Cases</h6>
+                    <h2 class="fw-bold">Completed Projects</h2>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-5 mb-4 mb-lg-0">
+                        <div class="list-group list-group-flush border-bottom">
+                            <a href="#" class="list-group-item list-group-item-action active fw-bold py-3">Project One</a>
+                            <a href="#" class="list-group-item list-group-item-action fw-bold py-3">Project Two</a>
+                            <a href="#" class="list-group-item list-group-item-action fw-bold py-3">Project Three</a>
+                        </div>
+                        <div class="mt-4">
+                            <h4 class="fw-bold">Why a visual identity system is more memorable</h4>
+                            <p class="text-muted">Lorem ipsum dolor sit, adipisicing elit repudiandae perferendis dolores praesentium nulla quibusdam repellendus.</p>
+                            <a href="#" class="btn btn-outline-danger fw-bold">KNOW MORE</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                        <img src="images/b3.jpg" class="img-fluid rounded shadow-sm" alt="Project Image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: TESTIMONIALS -->
+        <section id="testimonials" class="py-5 bg-light">
+            <div class="container py-lg-4">
+                <div class="text-center mb-5">
+                    <h6 class="text-danger fw-bold text-uppercase">Our Clients Testimonials</h6>
+                    <h2 class="fw-bold">What People Say</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card border-0 shadow-sm p-4 h-100">
+                            <div class="card-body">
+                                <p class="card-text text-muted fs-6">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda corporis deleniti praesentium."</p>
+                                <div class="d-flex align-items-center mt-4">
+                                    <img src="images/c1.jpg" class="rounded-circle me-3" width="50" height="50" alt="Client">
+                                    <div>
+                                        <h6 class="fw-bold mb-0">Oliver Bradley</h6>
+                                        <small class="text-muted">Company Name</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Có thể nhân bản thêm card testimonial tại đây -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: READY TO BUILD (CALL TO ACTION) -->
+        <section id="cta" class="py-5 text-center">
+            <div class="container py-lg-3">
+                <h2 class="fw-bold mb-3">Ready to build your own brand community?</h2>
+                <p class="text-muted mb-4 mx-auto" style="max-width: 700px;">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis dapibus nunc.</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#" class="btn btn-outline-danger btn-lg px-4 fs-6 fw-bold">BOOK A DEMO</a>
+                    <a href="#" class="btn btn-danger btn-lg px-4 fs-6 fw-bold">GET STARTED</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+    <footer class="bg-dark text-light pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 pb-4 border-bottom border-secondary">
+                <!-- Col 1: Meta -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="fw-bold text-white mb-3">Meta</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="#" class="text-decoration-none text-secondary">Log In</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary">Entries Feed</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary">Comments Feed</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary">WordPress.Org</a></li>
+                    </ul>
+                </div>
+                <!-- Col 2: Categories -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="fw-bold text-white mb-3">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-secondary">Business</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary">Design</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary">Industry</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary">Programming</a></li>
+                    </ul>
+                </div>
+                <!-- Col 3: Archives -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="fw-bold text-white mb-3">Archives</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-secondary">March 2021</a></li>
+                    </ul>
+                </div>
+                <!-- Col 4: Newsletter -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="fw-bold text-white mb-3">Newsletter</h5>
+                    <p class="text-secondary small">Get latest updates and offers.</p>
+                    <form class="mb-2">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Email Address" required>
+                            <button class="btn btn-danger" type="submit">Go</button>
+                        </div>
+                    </form>
+                    <small class="text-secondary d-block">Sign up for our latest news & articles. We won’t give you spam mails.</small>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright & Social -->
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center pt-4">
+                <p class="small text-secondary mb-2 mb-sm-0">© 2026 Masterwork. All Rights Reserved | WordPress Theme by W3Layouts.</p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-secondary fs-5"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="text-secondary fs-5"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="text-secondary fs-5"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-secondary fs-5"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="text-secondary fs-5"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript (nếu cần dùng sau này) -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
