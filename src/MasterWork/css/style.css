@@ -27,6 +27,29 @@ ul {
     padding: 0;
 }
 
+
+/* =========================
+   CONTENT LEFT - CONTENT PHOTO
+========================= */
+.content-left h1{
+    font-size:50px;
+    line-height:57px;
+    font-weight:700;
+    color:var(--title-color);
+}
+
+.content-left p{
+    font-size:20px;
+    line-height:28px;
+    color:var(--text-color);
+
+    margin-top:1rem;
+    margin-bottom:3rem;
+}
+
+.content-photo img{
+    max-width:100%;
+}
 /* =========================
    HEADER
 ========================= */
@@ -137,7 +160,7 @@ ul {
 .search a {
     width: 40px;
     height: 40px;
-    font-size:16px;
+    font-size: 16px;
 
     display: flex;
     justify-content: center;
@@ -173,7 +196,7 @@ ul {
     font-weight: 700;
     text-transform: uppercase;
 
-    padding: 12px 30px;
+    padding: 0.875rem 1.875rem;
 
     border-radius: 6px;
 
@@ -236,4 +259,29 @@ ul {
 
 .theme-label input:checked+.theme-icons .gg-moon {
     opacity: 0;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero-content {
+    display: grid;
+    align-items: center;
+
+    background:
+        linear-gradient(to right,
+            var(--bg-color),
+            rgba(255, 255, 255, .92)),
+        url("../img/banner.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    overflow: hidden;
+    position: relative;
+
+    padding-top: 8rem;
 }
