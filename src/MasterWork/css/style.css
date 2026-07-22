@@ -7,6 +7,11 @@
     --text-color: #5a5a5a;
     --bg-color: #ffffff;
     --light-bg: #f7f9fc;
+
+    --card-radius:6px;
+    --transition:.3s ease-in;
+    --translateY:-8px;
+    --card-shadow:0 15px 30px rgba(0,0,0,.1);
 }
 
 body {
@@ -29,26 +34,64 @@ ul {
 
 
 /* =========================
-   CONTENT LEFT - CONTENT PHOTO
+   COMMON COMPONENTS
 ========================= */
-.content-left h1{
-    font-size:50px;
-    line-height:57px;
-    font-weight:700;
-    color:var(--title-color);
+.content-left h1 {
+    font-size: 50px;
+    line-height: 57px;
+    font-weight: 700;
+    color: var(--title-color);
 }
 
-.content-left p{
-    font-size:20px;
-    line-height:28px;
-    color:var(--text-color);
+.content-left p {
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--text-color);
 
-    margin-top:1rem;
-    margin-bottom:3rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
 }
 
-.content-photo img{
-    max-width:100%;
+.content-photo img {
+    max-width: 100%;
+}
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.section-heading .sub-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+
+    margin-bottom: 5px;
+}
+
+.section-heading h2 {
+    font-size: 46px;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: var(--title-color);
+}
+
+.section-heading p {
+    font-size: 16px;
+    line-height: 22.5px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary{
+    color: #fff;
+    background-color: #dc4f72;
+    border-color: #dc4f72;
 }
 /* =========================
    HEADER
@@ -209,6 +252,19 @@ ul {
     color: #fff;
 }
 
+.about-read-more {
+    color: #fff;
+    background-color: #dc4f72;
+    border-color: #dc4f72;
+}
+
+.about-read-more:hover,
+.about-read-more:focus {
+    color: #fff;
+    background-color: #d62f58;
+    border-color: #cf2952;
+}
+
 .theme-button:focus {
     box-shadow: none;
 }
@@ -283,5 +339,189 @@ ul {
     overflow: hidden;
     position: relative;
 
-    padding-top: 8rem;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+
+}
+
+.content-photo img {
+    position: relative;
+    bottom: -4rem;
+}
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+
+.choose-us {
+    padding: 5rem 0;
+}
+
+.choose-list {
+    margin-top: 0px;
+}
+
+.choose-card {
+    text-align: center;
+    background: var(--light-bg);
+    border: 1px solid var(--light-bg);
+    border-radius: 6px;
+    padding: 3rem 2rem;
+    transition: .3s ease-in;
+}
+
+.choose-card:hover {
+    transform: translateY(-8px);
+    border: 1px solid #eee;
+    background: var(--bg-color);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgb(0 0 0 / 10%);
+}
+
+.choose-card a {
+    display: block;
+    color: inherit;
+}
+
+.choose-card img {
+    margin-bottom: 24px;
+}
+
+.choose-card h3 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 35px;
+
+    color: var(--title-color);
+
+    margin-bottom: 15px;
+}
+
+.choose-card p {
+    font-size: 16px;
+    line-height: 25px;
+
+    color: var(--text-color);
+
+    margin: 0;
+}
+
+.choose-card img {
+    margin-bottom: 24px;
+    transition: .3s;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    background: var(--light-bg);
+    padding: 5rem 0;
+}
+
+/* ----- About Company ----- */
+
+.about-company{
+    margin-bottom: 4rem;
+}
+
+.about-content{
+    padding-right: 3rem;
+}
+
+.about-content h2{
+    font-size: 35px;
+    line-height: 44px;
+    font-weight: 700;
+
+    color: var(--title-color);
+
+    margin-bottom: 1.5rem;
+}
+
+.about-content p{
+    font-size: 16px;
+    line-height: 24.5px;
+
+    color: var(--text-color);
+
+    margin-bottom: 3rem;
+}
+
+.about-image{
+    padding-left: 3rem;
+}
+
+.about-image img{
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+
+    transition: 0.3s ease-in-out;
+}
+
+.about-image:hover img{
+    transform: translateY(-0.5rem);
+}
+
+.sub-title{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+/* ----- Statistics ----- */
+
+.about-stats{
+    margin-top: 2rem;
+}
+
+.stats-card{
+    background: var(--bg-color);
+
+    padding: 2rem;
+
+    border-radius: var(--card-radius);
+
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+
+    transition: var(--transition);
+}
+
+.stats-card:hover{
+    box-shadow: var(--card-shadow);
+}
+
+.stats-card h4{
+    font-size: 16px;
+    font-weight: 700;
+
+    color: var(--title-color);
+
+    margin-bottom: .75rem;
+}
+
+.stats-card .counter{
+    display: block;
+
+    font-size: 50px;
+    line-height: 1;
+
+    font-weight: 700;
+
+    color: var(--primary);
+
+    margin-bottom: 1rem;
+}
+
+.stats-card p{
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 24px;
+
+    color: var(--text-color);
 }
