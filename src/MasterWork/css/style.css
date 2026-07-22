@@ -1,123 +1,239 @@
-/* ==========================================
-   GLOBAL VARIABLES & BASE STYLES
-=========================================== */
+/* =========================
+   GLOBAL
+========================= */
 :root {
-  --primary-color: #dc3545;       /* Màu chủ đạo (Nút & Accent) */
-  --primary-hover: #c82333;
-  --text-dark: #2c3038;            /* Màu chữ tối */
-  --text-muted: #696969;           /* Màu chữ phụ */
-  --bg-light: #ffffff;
+    --primary: #dc4f72;
+    --title-color: #2c3038;
+    --text-color: #5a5a5a;
+    --bg-color: #ffffff;
+    --light-bg: #f7f9fc;
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
-  color: var(--text-dark);
+    font-family: "Nunito", sans-serif;
+    color: var(--text-color);
+    background: var(--bg-color);
 }
 
-/* ==========================================
-   HEADER / NAVBAR STYLES
-=========================================== */
-.header-main {
-  background-color: var(--bg-light);
-  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease-in-out;
+
+
+a {
+    text-decoration: none;
 }
 
-/* Logo */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.main-header {
+    background: var(--bg-color);
+    box-shadow: 0 3px 9px rgb(0 0 0 / 5%);
+}
+
+.header-navbar {
+    padding: 10px 0;
+}
+
 .navbar-brand {
-  font-size: 26px;
-  color: var(--primary-color) !important;
+    margin: 0;
+    padding: 0;
+    color: var(--primary);
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -1px;
 }
 
-.navbar-brand .logo-icon {
-  font-size: 28px;
+.navbar-brand:hover {
+    color: var(--primary);
 }
 
-/* Nav Links */
+.navbar-brand span {
+    margin-right: 8px;
+}
+
+/* Nav Link */
 .navbar-nav .nav-link {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text-dark);
-  padding: 8px 16px !important;
-  transition: color 0.3s ease;
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--title-color);
+    padding: 14px 0;
+    margin: 0 15px;
+    transition: all .5s ease;
 }
 
-.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+
+    background: var(--primary);
+
+    bottom: 13px;
+
+    transition: all .5s;
+}
+
+.navbar-nav .nav-link:hover::before {
+    width: 20px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--title-color);
+}
+
 .navbar-nav .nav-link.active {
-  color: var(--primary-color) !important;
+    color: var(--primary);
 }
 
-/* Dropdown Menu */
+
+/* =========================
+   DROPDOWN
+========================= */
+
 .dropdown-menu {
-  border-radius: 8px;
-  padding: 10px 0;
+    margin-top: 10px;
+    min-width: 180px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 8%);
+    padding: 8px 0;
 }
 
 .dropdown-item {
-  font-weight: 600;
-  color: var(--text-dark);
-  padding: 8px 20px;
+    font-size: 16px;
+    color: var(--title-color);
+    padding: 10px 24px;
+    transition: color .3s;
 }
 
 .dropdown-item:hover {
-  background-color: rgba(220, 53, 69, 0.08);
-  color: var(--primary-color);
+    color: var(--primary);
+    background: transparent;
 }
 
-/* Buttons in Header */
-.btn-icon {
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-dark);
-  background-color: #f8f9fa;
-  border: 1px solid #e9ecef;
-  transition: all 0.3s ease;
+.dropdown-item:focus {
+    color: var(--primary);
+    background: transparent;
 }
 
-.btn-icon:hover {
-  color: var(--primary-color);
-  background-color: #e9ecef;
+
+/* =========================
+   SEARCH
+========================= */
+
+.search {
+    margin-left: 20px;
 }
 
-.btn-outline-theme {
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  font-size: 13px;
-  padding: 10px 22px;
-  border-radius: 4px;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
+.search a {
+    width: 40px;
+    height: 40px;
+    font-size:16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: var(--light-bg);
+
+    color: var(--text-color);
+
+    transition: all .5s;
 }
 
-.btn-outline-theme:hover {
-  background-color: var(--primary-color);
-  color: #fff;
+.search a:hover {
+    color: var(--title-color);
 }
 
-/* Font size icon nhỏ */
-.fs-12 {
-  font-size: 12px;
+
+/* =========================
+   BUTTON
+========================= */
+
+.header-button {
+    margin-left: 16px;
 }
 
-/* ==========================================
-   RESPONSIVE BREAKPOINTS (MOBILE & TABLET)
-=========================================== */
-@media (max-width: 991.98px) {
-  .navbar-collapse {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    margin-top: 15px;
-  }
+.theme-button {
+    color: var(--primary);
+    border-color: var(--primary);
 
-  .header-actions {
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px solid #eee;
-    justify-content: flex-start;
-  }
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    padding: 12px 30px;
+
+    border-radius: 6px;
+
+    transition: all .5s;
+}
+
+.theme-button:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.theme-button:focus {
+    box-shadow: none;
+}
+
+/* =========================
+   THEME TOGGLE
+========================= */
+
+.theme-toggle {
+    margin-left: 12px;
+}
+
+.theme-label {
+    cursor: pointer;
+}
+
+.theme-label input {
+    display: none;
+}
+
+.theme-icons {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.theme-icons i {
+    position: absolute;
+    transition: opacity .3s;
+}
+
+.theme-icons .gg-sun {
+    opacity: 0;
+}
+
+.theme-icons .gg-moon {
+    opacity: 1;
+}
+
+.theme-label input:checked+.theme-icons .gg-sun {
+    opacity: 1;
+}
+
+.theme-label input:checked+.theme-icons .gg-moon {
+    opacity: 0;
 }
