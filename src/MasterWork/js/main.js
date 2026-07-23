@@ -43,3 +43,26 @@ $(document).ready(function () {
         smartSpeed: 500
     });
 });
+
+// Lấy nút Back to Top
+const moveTopButton = document.getElementById("movetop");
+
+// Kiểm tra vị trí cuộn trang
+window.addEventListener("scroll", function () {
+    if (
+        document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100
+    ) {
+        moveTopButton.style.display = "block";
+    } else {
+        moveTopButton.style.display = "none";
+    }
+});
+
+// Cuộn lên đầu trang
+function topFunction() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
