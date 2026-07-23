@@ -8,10 +8,10 @@
     --bg-color: #ffffff;
     --light-bg: #f7f9fc;
 
-    --card-radius:6px;
-    --transition:.3s ease-in;
-    --translateY:-8px;
-    --card-shadow:0 15px 30px rgba(0,0,0,.1);
+    --card-radius: 6px;
+    --transition: .3s ease-in;
+    --translateY: -8px;
+    --card-shadow: 0 15px 30px rgba(0, 0, 0, .1);
 }
 
 body {
@@ -88,11 +88,12 @@ ul {
     margin-right: auto;
 }
 
-.btn-primary{
+.btn-primary {
     color: #fff;
     background-color: #dc4f72;
     border-color: #dc4f72;
 }
+
 /* =========================
    HEADER
 ========================= */
@@ -415,22 +416,22 @@ ul {
    ABOUT
 ========================= */
 
-.about{
+.about {
     background: var(--light-bg);
     padding: 5rem 0;
 }
 
 /* ----- About Company ----- */
 
-.about-company{
+.about-company {
     margin-bottom: 4rem;
 }
 
-.about-content{
+.about-content {
     padding-right: 3rem;
 }
 
-.about-content h2{
+.about-content h2 {
     font-size: 35px;
     line-height: 44px;
     font-weight: 700;
@@ -440,7 +441,7 @@ ul {
     margin-bottom: 1.5rem;
 }
 
-.about-content p{
+.about-content p {
     font-size: 16px;
     line-height: 24.5px;
 
@@ -449,22 +450,22 @@ ul {
     margin-bottom: 3rem;
 }
 
-.about-image{
+.about-image {
     padding-left: 3rem;
 }
 
-.about-image img{
+.about-image img {
     border-radius: var(--card-radius);
     box-shadow: var(--card-shadow);
 
     transition: 0.3s ease-in-out;
 }
 
-.about-image:hover img{
+.about-image:hover img {
     transform: translateY(-0.5rem);
 }
 
-.sub-title{
+.sub-title {
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
@@ -475,27 +476,24 @@ ul {
 
 /* ----- Statistics ----- */
 
-.about-stats{
+.about-stats {
     margin-top: 2rem;
 }
 
-.stats-card{
+.stats-card {
     background: var(--bg-color);
-
     padding: 2rem;
-
     border-radius: var(--card-radius);
-
-    box-shadow: 0 2px 8px rgba(0,0,0,.08);
-
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
     transition: var(--transition);
+
 }
 
-.stats-card:hover{
+.stats-card:hover {
     box-shadow: var(--card-shadow);
 }
 
-.stats-card h4{
+.stats-card h4 {
     font-size: 16px;
     font-weight: 700;
 
@@ -504,7 +502,7 @@ ul {
     margin-bottom: .75rem;
 }
 
-.stats-card .counter{
+.stats-card .counter {
     display: block;
 
     font-size: 50px;
@@ -517,11 +515,446 @@ ul {
     margin-bottom: 1rem;
 }
 
-.stats-card p{
+.stats-card p {
     margin: 0;
 
     font-size: 15px;
     line-height: 24px;
 
     color: var(--text-color);
+}
+
+/* =========================
+   BANNER
+========================= */
+
+.banner {
+    min-height: 480px;
+    padding: 2rem 0;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(to right,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.33)),
+        url("../img/bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.banner-content {
+    max-width: 550px;
+}
+
+.banner-content h2 {
+    color: #ffffff;
+
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+
+    margin-bottom: 1.5rem;
+}
+
+.banner-content p {
+    font-size: 16px;
+    color: #eee;
+    line-height: 24.5px;
+    margin: 24px 0 48px;
+}
+
+.banner-button {
+    color: var(--title-color);
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+.banner-button:hover,
+.banner-button:focus {
+    color: var(--title-color);
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq {
+    padding: 5rem 0;
+    background-color: var(--light-bg);
+}
+
+/* ----- FAQ Header ----- */
+
+.faq-header {
+    max-width: 750px;
+}
+
+.faq-header h2 {
+    margin: 0;
+
+    color: var(--title-color);
+
+    font-size: 46px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.faq-header p {
+    margin-bottom: 0;
+
+    color: var(--text-color);
+
+    font-size: 16px;
+    line-height: 24.5px;
+}
+
+/* ----- FAQ Image ----- */
+
+.faq-image img {
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+
+    transition: var(--transition);
+}
+
+.faq-image:hover img {
+    transform: translateY(-8px);
+}
+
+/* ----- FAQ Accordion ----- */
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-list .accordion-item {
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    overflow: hidden;
+
+    background-color: var(--bg-color);
+}
+
+.faq-list .accordion-button {
+    padding: 22px 25px;
+
+    color: var(--title-color);
+    background-color: var(--bg-color);
+
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+
+    box-shadow: none;
+}
+
+.faq-list .accordion-button:not(.collapsed) {
+    color: var(--title-color);
+    background-color: var(--bg-color);
+    box-shadow: none;
+}
+
+.faq-list .accordion-button:focus {
+    box-shadow: none;
+}
+
+.faq-list .accordion-body {
+    padding: 0 25px 22px;
+
+    color: var(--text-color);
+
+    font-size: 16px;
+    line-height: 24.5px;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects {
+    padding: 5rem 0;
+    background-color: var(--bg-color);
+}
+
+/* ----- Projects Header ----- */
+
+.projects-header {
+    max-width: 750px;
+}
+
+.projects-header h2 {
+    margin: 0;
+
+    color: var(--title-color);
+
+    font-size: 46px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.projects-header p {
+    margin-bottom: 0;
+
+    color: var(--text-color);
+
+    font-size: 16px;
+    line-height: 24.5px;
+}
+
+/* ----- Project Tabs ----- */
+
+.projects-tabs {
+    display: flex;
+    border-bottom: 3px solid #c1c1c1;
+}
+
+.projects-tabs .nav-item {
+    flex: 1;
+}
+
+.projects-tabs .nav-link {
+    width: 100%;
+    padding: 15px;
+
+    color: var(--title-color);
+    background-color: transparent;
+
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    transform: translateY(3px);
+}
+
+.projects-tabs .nav-link:hover,
+.projects-tabs .nav-link:focus {
+    color: var(--title-color);
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.projects-tabs .nav-link.active {
+    color: var(--primary);
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom-color: var(--primary);
+}
+
+/* ----- Project Content ----- */
+
+.projects-tab-content {
+    padding: 3rem 1rem 0;
+}
+
+.project-content h3 {
+    margin-bottom: 1rem;
+
+    color: var(--title-color);
+
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+}
+
+.project-content p {
+    margin: 0;
+
+    color: var(--text-color);
+
+    font-size: 16px;
+    line-height: 24.5px;
+}
+
+.project-button {
+    padding: 14px 30px;
+
+    color: var(--primary);
+    background-color: transparent;
+
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    transition: var(--transition);
+}
+
+.project-button:hover,
+.project-button:focus {
+    color: #ffffff;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* ----- Project Image ----- */
+
+.project-image img {
+    width: 100%;
+    border-radius: var(--card-radius);
+
+    transition: var(--transition);
+}
+
+.project-image:hover img {
+    transform: translateY(-8px);
+}
+
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.testimonials {
+    padding: 5rem 0;
+
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.77),
+            rgba(255, 255, 255, 0.77)
+        ),
+        url("../img/b2.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ----- Testimonials Header ----- */
+
+.testimonials-header {
+    max-width: 750px;
+}
+
+.testimonials-header h2 {
+    margin: 0;
+
+    color: var(--title-color);
+
+    font-size: 46px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.testimonials-header > p {
+    margin-bottom: 0;
+
+    color: var(--text-color);
+
+    font-size: 16px;
+    line-height: 24.5px;
+}
+
+/* ----- Testimonial Card ----- */
+
+.testimonial-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 30px;
+
+    min-height: 250px;
+    padding: 2rem;
+
+    background-color: var(--bg-color);
+}
+
+/* ----- Client Image ----- */
+
+.testimonial-image {
+    width: 100px;
+    height: 100px;
+
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+/* ----- Testimonial Content ----- */
+
+.testimonial-content {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    gap: 10px;
+}
+
+.quote-icon {
+    color: var(--title-color);
+
+    font-size: 30px;
+    opacity: 0.2;
+}
+
+.testimonial-message > p {
+    margin: 0;
+
+    color: var(--text-color);
+
+    font-size: 18px;
+    line-height: 26px;
+}
+
+/* ----- Author ----- */
+
+.testimonial-author {
+    margin-top: 1.5rem;
+}
+
+.testimonial-author h4 {
+    margin-bottom: 5px;
+
+    color: var(--primary);
+
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.testimonial-author p {
+    margin: 0;
+
+    color: var(--text-color);
+
+    font-size: 13px;
+}
+
+/* ----- Owl Carousel Dots ----- */
+
+.testimonials-carousel .owl-dots {
+    margin-top: 30px !important;
+}
+
+.testimonials-carousel .owl-dots .owl-dot span {
+    width: 40px;
+    height: 5px;
+    margin: 5px;
+
+    background-color: #ffffff;
+    border-radius: 0;
+
+    transition: var(--transition);
+}
+
+.testimonials-carousel .owl-dots .owl-dot:hover span,
+.testimonials-carousel .owl-dots .owl-dot.active span {
+    background-color: var(--primary);
 }
