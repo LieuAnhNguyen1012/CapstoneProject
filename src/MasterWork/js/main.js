@@ -40,7 +40,18 @@ $(document).ready(function () {
         nav: false,
         dots: true,
         autoplay: false,
-        smartSpeed: 500
+        smartSpeed: 500,
+        responsive: {
+            0: {
+                items: 1
+            },
+            980: {
+                items: 1
+            },
+            981: {
+                items: 2
+            }
+        }
     });
 });
 
