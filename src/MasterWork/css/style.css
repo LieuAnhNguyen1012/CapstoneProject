@@ -23,6 +23,7 @@ body {
     color: var(--text-color);
     background: var(--bg-color);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 img {
@@ -139,13 +140,19 @@ ul {
 }
 
 /* Nav Link */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .navbar-nav .nav-link {
     position: relative;
     font-size: 16px;
     font-weight: 400;
     color: var(--title-color);
-    padding: 14px 0;
-    margin: 0 15px;
+    padding: 14px 15px;
+    margin: 0;
     transition: all .5s ease;
 }
 
@@ -190,15 +197,32 @@ ul {
 }
 
 .dropdown-item {
+    position: relative;
     font-size: 16px;
     color: var(--title-color);
     padding: 10px 24px;
     transition: color .3s;
 }
 
+.dropdown-item::after {
+    content: "";
+    position: absolute;
+    left: 24px;
+    bottom: 10px;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width .5s ease;
+}
+
 .dropdown-item:hover {
     color: var(--primary);
     background: transparent;
+}
+
+.dropdown-item:hover::after,
+.dropdown-item:focus::after {
+    width: 20px;
 }
 
 .dropdown-item:focus {
@@ -210,10 +234,6 @@ ul {
 /* =========================
    SEARCH
 ========================= */
-
-.search {
-    margin-left: 20px;
-}
 
 .search a {
     width: 40px;
@@ -243,7 +263,8 @@ ul {
 ========================= */
 
 .header-button {
-    margin-left: 16px;
+    margin-left: 0;
+    flex-shrink: 0;
 }
 
 .theme-button {
@@ -1349,12 +1370,18 @@ ul {
    RESPONSIVE
 ========================= */
 
-@media (min-width: 992px) {
-    .header-button {
-        margin-left: auto;
+/* Laptop nhỏ */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .header-navbar .navbar-nav .nav-link {
+        padding: 18px 10px;
+    }
+
+    .header-navbar .header-button .theme-button {
+        padding: 0.8rem 1.3rem;
     }
 }
 
+/* Tablet và mobile */
 @media (max-width: 991px) {
     .header-navbar {
         position: relative;
@@ -1364,6 +1391,13 @@ ul {
         flex-wrap: wrap;
     }
 
+    .header-actions {
+        order: 1;
+        margin-left: auto;
+        margin-top: 0;
+        position: relative;
+        z-index: 1100;
+    }
 
     .navbar-toggler {
         margin-left: auto;
@@ -1373,6 +1407,7 @@ ul {
 
     .navbar-collapse {
         width: 100%;
+        flex-basis: 100%;
         margin-top: 1rem;
         padding: 1rem;
         border-radius: 8px;
@@ -1383,32 +1418,34 @@ ul {
         z-index: 1000;
     }
 
-    .about-stats .col-lg-4 {
-        margin-bottom: 1rem;
+    .navbar-nav {
+        margin-left: 0 !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
     }
 
     .navbar-nav .nav-link {
         margin: 0;
         padding: 8px 0;
+        width: 100%;
+        text-align: center;
     }
 
-    .search,
+    .search {
+        display: flex;
+        justify-content: center;
+        margin: 0.75rem 0 0;
+    }
+
     .header-button {
-        margin-left: 0;
-        margin-top: 0.75rem;
+        margin: 0.75rem 0 0;
+        text-align: center;
     }
 
-    .theme-toggle {
-        margin-left: 0;
-        margin-top: 0;
-    }
-
-    .header-actions {
-        margin-left: auto;
-        margin-top: 0;
-        order: 1;
-        position: relative;
-        z-index: 1100;
+    .about-stats .col-lg-4 {
+        margin-bottom: 1rem;
     }
 
     .content-left h1 {
@@ -1442,39 +1479,35 @@ ul {
     }
 }
 
-@media (max-width: 980px) {
-    .testimonial-item {
-        grid-template-columns: 100px 1fr;
-        gap: 20px;
-        padding: 1.5rem;
-        align-items: start;
+/* Desktop */
+@media (min-width: 992px) {
+    .header-navbar .navbar-collapse {
+        flex-grow: 1;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        order: 2;
     }
 
-    .testimonial-content {
-        grid-template-columns: 35px 1fr;
+    .header-navbar .navbar-nav {
+        margin-left: auto !important;
+        gap: 10px;
+    }
+
+    .header-navbar .search,
+    .header-navbar .header-button {
+        margin-left: 0;
+        flex-shrink: 0;
+    }
+
+    .header-navbar .header-actions {
+        order: 3;
+        margin-left: 10px;
+        flex-shrink: 0;
     }
 }
 
-@media (max-width: 992px) {
-    .testimonial-item {
-        grid-template-columns: 1fr;
-        justify-items: center;
-        text-align: center;
-        align-items: center;
-    }
-
-    .testimonial-content {
-        grid-template-columns: 1fr;
-        justify-items: center;
-    }
-
-    .testimonial-author {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
+/* Mobile */
 @media (max-width: 767px) {
     .hero-content {
         background-attachment: scroll;
@@ -1510,17 +1543,9 @@ ul {
         padding: 1.5rem;
     }
 
-    .projects-tabs {
-        flex-direction: column;
-        border-bottom: none;
-    }
-
-    .projects-tabs .nav-item {
-        width: 100%;
-    }
-
-    .projects-tabs .nav-link {
-        border-bottom: 1px solid #e2e2e2;
+    .projects-tabs,
+    .projects-tab-content {
+        display: none;
     }
 
     .project-mobile-accordion {
@@ -1555,14 +1580,69 @@ ul {
         width: 100%;
     }
 
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .footer-social ul {
         flex-wrap: wrap;
         gap: 15px;
     }
 }
 
-@media (min-width: 768px) {
-    .project-mobile-accordion {
-        display: none;
+/* Mobile nhỏ */
+@media (max-width: 575px) {
+    .content-left h1 {
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    .section-heading h2,
+    .faq-header h2,
+    .projects-header h2,
+    .testimonials-header h2,
+    .cta-content h2,
+    .about-content h2 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+}
+
+/* =========================
+   BREADCRUMBS
+========================= */
+
+.breadcrumbs {
+    margin-top: 90px;
+    padding: 15px 0;
+    background-color: #f7f9fc;
+}
+
+.AllBreadcrumbs {
+    color: #2c3038;
+    font-size: 14px;
+}
+
+.AllBreadcrumbs a {
+    color: #dc4f72;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.AllBreadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-icon {
+    display: inline-block;
+    margin: 0 10px;
+    color: #2c3038;
+}
+
+@media (max-width: 991px) {
+    .breadcrumbs {
+        margin-top: 70px;
+        padding: 15px 0;
     }
 }

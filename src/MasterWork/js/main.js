@@ -1,3 +1,7 @@
+/* =========================
+   ABOUT STATS COUNTER
+========================= */
+
 const counters = document.querySelectorAll(".counter");
 const aboutStats = document.querySelector(".about-stats");
 
@@ -30,7 +34,14 @@ const observer = new IntersectionObserver(function (entries) {
     }
 });
 
-observer.observe(aboutStats);
+if (aboutStats) {
+    observer.observe(aboutStats);
+}
+
+
+/* =========================
+   TESTIMONIALS CAROUSEL
+========================= */
 
 $(document).ready(function () {
     $(".testimonials-carousel").owlCarousel({
@@ -54,6 +65,11 @@ $(document).ready(function () {
         }
     });
 });
+
+
+/* =========================
+   BACK TO TOP BUTTON
+========================= */
 
 // Lấy nút Back to Top
 const moveTopButton = document.getElementById("movetop");
